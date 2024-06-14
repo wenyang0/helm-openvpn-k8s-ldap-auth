@@ -3,7 +3,7 @@ RUN apk add --no-cache openvpn openssl iptables bash
 
 FROM base as build
 RUN apk add --no-cache openvpn-dev autoconf re2c libtool \
-                openldap-dev libressl-dev gcc-objc make git
+                openldap-dev  gcc-objc make git
 RUN git clone https://github.com/OpenVPN/easy-rsa.git && \
         mv /easy-rsa/easyrsa3 /usr/share/easy-rsa
 RUN git clone https://github.com/threerings/openvpn-auth-ldap
